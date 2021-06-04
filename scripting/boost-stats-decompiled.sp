@@ -48,7 +48,7 @@ public void OnPluginStart()
 	{
 		if (AreClientCookiesCached(i))
 		{
-				OnClientCookiesCached(i);
+			OnClientCookiesCached(i);
 		}
 	}
 
