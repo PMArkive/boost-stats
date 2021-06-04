@@ -45,22 +45,22 @@ public void OnPluginStart()
 	RegConsoleCmd("sm_bs", Command_BSAll, "toggles all booststats");
 	gH_BSCookie = RegClientCookie("booststats_enabled", "booststats_enabled", CookieAccess_Protected);
 	for(int i = 1; i <= MaxClients; i++)
-    {
-        if (AreClientCookiesCached(i))
+	{
+		if (AreClientCookiesCached(i))
 		{
-			OnClientCookiesCached(i);
+				OnClientCookiesCached(i);
 		}
-    }
+	}
 
 	if (gB_LateLoaded)
 	{
 		for(int i = 1; i <= MaxClients; i++)
-        {
-            if (IsClientInGame(i))
+		{
+			if (IsClientInGame(i))
 			{
 				OnClientPutInServer(i);
 			}
-        }
+		}
 		
 		OnMapStart();
 		gB_LateLoaded = false;
@@ -78,6 +78,7 @@ public Action Command_BSAll(int client, int args)
 		{
 			Format(sStatus, 32, "{green}Enabled.{default}");
 		}
+		
 		else
 		{
 			Format(sStatus, 32, "{red}Disabled.{default}");
@@ -358,6 +359,7 @@ void PrintRun(int entity)
 	{
 		clrind = DuckColors(speed);
 	}
+	
 	else
 	{
 		clrind = Colors(speed);
