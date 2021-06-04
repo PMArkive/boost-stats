@@ -324,7 +324,7 @@ void PrintVel(int client, int flashcount)
 						GetEntProp(j, Prop_Data, "m_iObserverMode", 4) != 7 && gB_AllEnabled[j]) || 
 							((client != j && gI_Partner[client] != j) && gB_AllEnabled[j])))
 			{
-				CPrintToChat(j, gS_VelMessages[client][j]);
+				CPrintToChat(j, gS_VelMessages[client][i]);
 			}
 		}
 		//gS_VelMessages[client][i][0] = MissingTAG:0; ????
